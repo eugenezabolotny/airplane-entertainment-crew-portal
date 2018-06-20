@@ -1,0 +1,12 @@
+@import "../../scss/vendors/bootstrap/variables";
+
+nav {
+  $nav-height: 70px;
+  height: $nav-height;
+  
+  .menu-btn {
+    height: $nav-height;
+    width: $nav-height;
+    background-color: $gray-400;
+  }
+}
