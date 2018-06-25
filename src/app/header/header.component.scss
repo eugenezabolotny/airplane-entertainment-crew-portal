@@ -1,9 +1,7 @@
 @import "../../scss/vendors/bootstrap/variables";
+@import "../../scss/components/global-variables";
 
-$nav-height: 70px;
 $plane-url: url('../../assets/img/telefonixpdt-website-for-devices_airplane-icon.png');
-$background-url: url('../../assets/img/banners/bg-1536x852.jpg');
-$telefonix-url: url('../../assets/img/icon_telefonixpdt-tm-logo-white.png');
 
 .nav {
   position: absolute;
@@ -14,6 +12,7 @@ $telefonix-url: url('../../assets/img/icon_telefonixpdt-tm-logo-white.png');
 
   .menu-btn {
     position: absolute;
+    z-index: 1;
     top: 0;
     bottom: 0;
     left: 0;
@@ -22,6 +21,7 @@ $telefonix-url: url('../../assets/img/icon_telefonixpdt-tm-logo-white.png');
     justify-content: center;
     align-items: center;
     background-color: $gray-600;
+    cursor: pointer;
   }
 
   .cell {
@@ -75,6 +75,11 @@ $telefonix-url: url('../../assets/img/icon_telefonixpdt-tm-logo-white.png');
           background-color: $gray-600;
         }
       }
+    }
+
+    &-time {
+      bottom: -20px;
+      font-size: 14px;
     }
   }
 
@@ -141,6 +146,7 @@ $telefonix-url: url('../../assets/img/icon_telefonixpdt-tm-logo-white.png');
 
 .menu {
   position: absolute;
+  z-index: 1;
   top: $nav-height;
   bottom: 0;
   width: 315px;
@@ -168,21 +174,5 @@ $telefonix-url: url('../../assets/img/icon_telefonixpdt-tm-logo-white.png');
     &-text {
       letter-spacing: 3px;
     }
-  }
-}
-
-.main {
-  display: flex;
-  flex-flow: column;
-  align-items: stretch;
-  min-height: 100vh;
-  background: $background-url fixed center;
-  background-size: cover;
-
-  .telefonix {
-    height: 60px;
-    margin-top: auto;
-    margin-right: 20px;
-    background: $telefonix-url no-repeat right;
   }
 }

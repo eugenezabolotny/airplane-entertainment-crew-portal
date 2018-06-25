@@ -113,3 +113,10 @@ $border-radius-sm:  0;
 // Fonts
 $font-family-sans-serif:  Arial, "Helvetica Neue", Helvetica, sans-serif;
 $font-family-brand:       Palatino, "Palatino Linotype", Georgia, Times, "Times New Roman", serif;
+$font-size-base:          1rem;
+$h1-font-size:            $font-size-base * 3;
+
+// Buttons
+$btn-border-radius:           999px;
+$btn-border-radius-lg:        999px;
+$btn-border-radius-sm:        999px;

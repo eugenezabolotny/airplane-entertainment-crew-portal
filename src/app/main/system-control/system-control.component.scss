@@ -1,0 +1,21 @@
+@import "../../../scss/components/route-btn-group";
+@import "../../../scss/components/layout";
+
+$play-safety-message: url('../../../assets/img/telefonixpdt-website-for-devicesv2-75.png');
+$turn-on-entertainment: url('../../../assets/img/telefonixpdt-website-for-devicesv2-76.png');
+$reset-system: url('../../../assets/img/telefonixpdt-website-for-devicesv2-77.png');
+
+.system-control {
+
+  .play-safety-message-btn .icon {
+    background-image: $play-safety-message;
+  }
+
+  .turn-on-entertainment-btn .icon {
+    background-image: $turn-on-entertainment;
+  }
+
+  .reset-system-btn .icon {
+    background-image: $reset-system;
+  }
+}

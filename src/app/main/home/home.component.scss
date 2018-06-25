@@ -1,0 +1,23 @@
+@import "../../../scss/vendors/bootstrap/variables";
+@import "../../../scss/components/layout";
+@import "../../../scss/components/route-btn-group";
+
+$load-content: url('../../../assets/img/telefonixpdt-icons-61.png');
+$system-control: url('../../../assets/img/telefonixpdt-icons-62.png');
+$system-status: url('../../../assets/img/telefonixpdt-icons-63.png');
+
+.home {
+
+  .load-content-btn .icon {
+    background-image: $load-content;
+  }
+
+  .system-control-btn .icon {
+    background-image: $system-control;
+  }
+
+  .system-status-btn .icon {
+    background-image: $system-status;
+  }
+}
+

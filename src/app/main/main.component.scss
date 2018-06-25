@@ -1,0 +1,21 @@
+@import "../../scss/components/global-variables";
+
+$background-url: url('../../assets/img/banners/bg-1536x852.jpg');
+$telefonix-url: url('../../assets/img/icon_telefonixpdt-tm-logo-white.png');
+
+.main {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  min-height: 100vh;
+  padding-top: $nav-height;
+  background: $background-url fixed center;
+  background-size: cover;
+
+  .telefonix {
+    height: 60px;
+    margin-top: auto;
+    margin-right: 20px;
+    background: $telefonix-url no-repeat right;
+  }
+}

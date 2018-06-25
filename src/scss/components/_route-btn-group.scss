@@ -1,0 +1,22 @@
+@import "../vendors/bootstrap/variables";
+
+.route-btn-group {
+
+  .route-btn {
+    height: 220px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    background-color: rgba($white, 0.3);
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    .icon {
+      height: 120px;
+      margin-bottom: 15px;
+      background: no-repeat center;
+      background-size: contain;
+    }
+  }
+}
