@@ -35,27 +35,33 @@
 </nav>
 
 <aside class="menu text-uppercase" [ngClass]="{'d-block': menuStatus, 'd-none': !menuStatus}">
-  <a routerLink="/" class="menu-item">
+  <a routerLink="/" class="menu-item"
+    (click)="changeMenuStatus()">
     <img src="./assets/img/telefonixpdt-website-for-devices-icons-61.png" class="menu-item-icon">
     <div class="menu-item-text">home</div>
   </a>
-  <a routerLink="/system-control" class="menu-item">
+  <a routerLink="/system-control" class="menu-item"
+    (click)="changeMenuStatus()">
     <img src="./assets/img/telefonixpdt-icons-69.png" class="menu-item-icon">
     <div class="menu-item-text">system control</div>
   </a>
-  <a routerLink="/load-content" class="menu-item">
+  <a routerLink="/load-content" class="menu-item"
+    (click)="changeMenuStatus()">
     <img src="./assets/img/telefonixpdt-icons-68.png" class="menu-item-icon">
     <div class="menu-item-text">load content</div>
   </a>
-  <a routerLink="/system-status" class="menu-item">
+  <a routerLink="/system-status" class="menu-item"
+    (click)="changeMenuStatus()">
     <img src="./assets/img/telefonixpdt-icons-70.png" class="menu-item-icon">
     <div class="menu-item-text">system status</div>
   </a>
-  <a routerLink="/modem-status" class="menu-item">
+  <a routerLink="/modem-status" class="menu-item"
+    (click)="changeMenuStatus()">
     <div class="menu-item-icon menu-item-icon--custom modem-status-icon"></div>
     <div class="menu-item-text">modem status</div>
   </a>
-  <a routerLink="/devices-status" class="menu-item">
+  <a routerLink="/devices-status" class="menu-item"
+    (click)="changeMenuStatus()">
     <div class="menu-item-icon menu-item-icon--custom devices-status-icon"></div>
     <div class="menu-item-text">devices status</div>
   </a>
