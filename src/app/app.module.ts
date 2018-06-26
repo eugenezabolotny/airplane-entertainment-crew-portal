@@ -10,6 +10,8 @@ import { SystemStatusComponent } from './main/system-status/system-status.compon
 import { LoadContentComponent } from './main/load-content/load-content.component';
 import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './main/home/home.component';
+import { ModemStatusComponent } from './main/modem-status/modem-status.component';
+import { DevicesStatusComponent } from './main/devices-status/devices-status.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,6 +19,8 @@ const appRoutes: Routes = [
     { path: 'load-content', component: LoadContentComponent },
     { path: 'system-control', component: SystemControlComponent },
     { path: 'system-status', component: SystemStatusComponent },
+    { path: 'modem-status', component: ModemStatusComponent },
+    { path: 'devices-status', component: DevicesStatusComponent },
 ];
 
 @NgModule({
@@ -29,6 +33,8 @@ const appRoutes: Routes = [
     LoadContentComponent,
     AuthComponent,
     HomeComponent,
+    ModemStatusComponent,
+    DevicesStatusComponent,
   ],
   imports: [
     BrowserModule,

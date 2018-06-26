@@ -1,0 +1,51 @@
+@import "../../../scss/components/layout";
+
+$ios-icon-url: url('../../../assets/img/ios-logo.png');
+$android-icon-url: url('../../../assets/img/android-logo.png');
+$windows-icon-url: url('../../../assets/img/windows-logo.png');
+
+.devices-status {
+
+  .card {
+    position: relative;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+    &::after {
+      content: '';
+      opacity: 0.3;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 10%;
+      bottom: 10%;
+      left: 10%;
+      right: 10%;
+    }
+
+    &.ios::after {
+      background-image: $ios-icon-url;
+    }
+    &.android::after {
+      background-image: $android-icon-url;
+    }
+    &.windows::after {
+      background-image: $windows-icon-url;
+    }
+  }
+
+  .card-img-top {
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .list-group {
+    font-size: 12px;
+  }
+
+  .card-title {
+    font-weight: bold;
+  }
+}

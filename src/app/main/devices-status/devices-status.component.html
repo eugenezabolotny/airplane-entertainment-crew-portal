@@ -1,0 +1,59 @@
+<div class="layout">
+  <div class="container">
+    <div class="devices-status">
+      <div class="header col-12 h1">devices status</div>
+      <div class="row">
+        <div *ngFor="let device of devicesStatus" class="col-12 col-sm-6 col-lg-4 mb-4">
+          <div class="card  {{ device.os }}">
+            <ul class="list-group list-group-flush">
+              <li class="row justify-content-between">
+                <div class="col-6 font-weight-bold">launchDate</div>
+                <div class="col-6">{{ device.launchDate }}</div>
+              </li>
+              <li class="row justify-content-between">
+                <div class="col-6 font-weight-bold">deviceId</div>
+                <div class="col-6">{{ device.deviceId }}</div>
+              </li>
+              <li class="row justify-content-between">
+                <div class="col-6 font-weight-bold">ssid</div>
+                <div class="col-6">{{ device.ssid }}</div>
+              </li>
+              <li class="row justify-content-between">
+                <div class="col-6 font-weight-bold">accessPointMAC</div>
+                <div class="col-6">{{ device.accessPointMAC }}</div>
+              </li>
+              <li class="row justify-content-between">
+                <div class="col-6 font-weight-bold">rssi</div>
+                <div class="col-6">{{ device.rssi }}</div>
+              </li>
+              <li class="row justify-content-between">
+                <div class="col-6 font-weight-bold">ip</div>
+                <div class="col-6">{{ device.ip }}</div>
+              </li>
+              <li class="row justify-content-between">
+                <div class="col-6 font-weight-bold">dataReceived</div>
+                <div class="col-6">{{ device.dataReceived }}</div>
+              </li>
+              <li class="row justify-content-between">
+                <div class="col-6 font-weight-bold">dataSent</div>
+                <div class="col-6">{{ device.dataSent }}</div>
+              </li>
+              <li class="row justify-content-between">
+                <div class="col-6 font-weight-bold">connectionSpeed</div>
+                <div class="col-6">{{ device.connectionSpeed }}</div>
+              </li>
+              <li class="row justify-content-between">
+                <div class="col-6 font-weight-bold">serverPing</div>
+                <div class="col-6">{{ device.serverPing }}</div>
+              </li>
+              <li class="row justify-content-between">
+                <div class="col-6 font-weight-bold">controlServerURL</div>
+                <div class="col-6">{{ device.controlServerURL }}</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

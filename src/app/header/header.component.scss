@@ -2,6 +2,8 @@
 @import "../../scss/components/global-variables";
 
 $plane-url: url('../../assets/img/telefonixpdt-website-for-devices_airplane-icon.png');
+$modem-url: url('../../assets/img/modem_w.png');
+$devices-url: url('../../assets/img/devices_w.png');
 
 .nav {
   position: absolute;
@@ -169,6 +171,21 @@ $plane-url: url('../../assets/img/telefonixpdt-website-for-devices_airplane-icon
       height: 37px;
       width: 37px;
       margin: 0 15px;
+
+      &--custom {
+        border: 2px solid $white;
+        border-radius: 99px;
+        background-size: 19px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &.modem-status-icon {
+        background-image: $modem-url;
+      }
+      &.devices-status-icon {
+        background-image: $devices-url;
+      }
     }
 
     &-text {

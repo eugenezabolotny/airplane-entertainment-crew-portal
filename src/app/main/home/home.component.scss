@@ -5,6 +5,8 @@
 $load-content: url('../../../assets/img/telefonixpdt-icons-61.png');
 $system-control: url('../../../assets/img/telefonixpdt-icons-62.png');
 $system-status: url('../../../assets/img/telefonixpdt-icons-63.png');
+$modem-status: url('../../../assets/img/modem.png');
+$devices-status: url('../../../assets/img/devices.png');
 
 .home {
 
@@ -18,6 +20,26 @@ $system-status: url('../../../assets/img/telefonixpdt-icons-63.png');
 
   .system-status-btn .icon {
     background-image: $system-status;
+  }
+
+  .modem-status-btn .icon{
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid $bluegray;
+    border-radius: 999px;
+    background-image: $modem-status;
+    background-size: 70px;
+  }
+
+  .devices-status-btn .icon {
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid $bluegray;
+    border-radius: 999px;
+    background-image: $devices-status;
+    background-size: 65px;
   }
 }
 
