@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MODEM_STATUS} from '../../data/mock-data/modem-status';
 
 @Component({
   selector: 'app-modem-status',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModemStatusComponent implements OnInit {
 
-  constructor() { }
+  modemStatus = MODEM_STATUS;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -1,0 +1,12 @@
+@import "../../../scss/components/layout";
+
+.modem-status {
+
+  .row {
+    margin-bottom: 24px;
+
+    div:last-child {
+      font-weight: bold;
+    }
+  }
+}

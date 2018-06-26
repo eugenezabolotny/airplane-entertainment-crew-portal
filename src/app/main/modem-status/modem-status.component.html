@@ -1,3 +1,23 @@
-<p>
-  modem-status works!
-</p>
+<div class="layout">
+  <div class="container">
+    <div class="modem-status">
+      <div class="header col-12 h1">modem status</div>
+      <div class="row mt-5">
+        <div class="col-12 col-sm-6">Active SIM card slot</div>
+        <div class="col-12 col-sm-6">{{modemStatus.activeSIMCardSlot}}</div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6">Active carrier name</div>
+        <div class="col-12 col-sm-6">{{modemStatus.activeCarrierName}}</div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6">Signal strength</div>
+        <div class="col-12 col-sm-6">{{modemStatus.signalStrength}}</div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6">Data received/sent statistic</div>
+        <div class="col-12 col-sm-6">{{modemStatus.dataReceivedSentStatistic}}</div>
+      </div>
+    </div>
+  </div>
+</div>
