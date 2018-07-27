@@ -1,8 +1,8 @@
 @import "../../../scss/components/layout";
 
-$ios-icon-url: url('../../../assets/img/ios-logo.png');
-$android-icon-url: url('../../../assets/img/android-logo.png');
-$windows-icon-url: url('../../../assets/img/windows-logo.png');
+$ios-icon-url: url('../../../assets/img/ios-logo-light.png');
+$android-icon-url: url('../../../assets/img/android-logo-light.png');
+$windows-icon-url: url('../../../assets/img/windows-logo-light.png');
 
 .devices-status {
 
@@ -10,27 +10,17 @@ $windows-icon-url: url('../../../assets/img/windows-logo.png');
     position: relative;
     border-radius: 5px;
     padding: 5px 10px;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    &::after {
-      content: '';
-      opacity: 0.3;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 10%;
-      bottom: 10%;
-      left: 10%;
-      right: 10%;
-    }
-
-    &.ios::after {
+    &.ios {
       background-image: $ios-icon-url;
     }
-    &.android::after {
+    &.android {
       background-image: $android-icon-url;
     }
-    &.windows::after {
+    &.windows {
       background-image: $windows-icon-url;
     }
   }

@@ -1,5 +1,5 @@
 export class DeviceStatus {
-  os: string;
+  platform: string;
   launchDate: string;
   deviceId: string;
   ssid: string;

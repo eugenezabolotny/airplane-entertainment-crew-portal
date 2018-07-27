@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,6 +14,7 @@ import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './main/home/home.component';
 import { ModemStatusComponent } from './main/modem-status/modem-status.component';
 import { DevicesStatusComponent } from './main/devices-status/devices-status.component';
+import { TableModule } from 'primeng/table';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -39,6 +42,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

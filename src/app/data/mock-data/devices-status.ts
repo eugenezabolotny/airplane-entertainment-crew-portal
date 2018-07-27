@@ -2,7 +2,7 @@ import {DeviceStatus} from '../data-types/device-status';
 
 export const DEVICES_STATUS: Array<DeviceStatus> = [
   {
-    os: 'ios',
+    platform: 'ios',
     launchDate: '17.04.2006 14:22:48',
     deviceId: '1234ABCD5678',
     ssid: 'EnGeniusD0A860',
@@ -16,7 +16,7 @@ export const DEVICES_STATUS: Array<DeviceStatus> = [
     controlServerURL: 'http://controlServerURL/some-url/',
   },
   {
-    os: 'android',
+    platform: 'android',
     launchDate: '17.04.2006 14:22:48',
     deviceId: '1234ABCD5678',
     ssid: 'EnGeniusD0A860',
@@ -30,7 +30,7 @@ export const DEVICES_STATUS: Array<DeviceStatus> = [
     controlServerURL: 'http://controlServerURL/some-url/',
   },
   {
-    os: 'windows',
+    platform: 'windows',
     launchDate: '17.04.2006 14:22:48',
     deviceId: '1234ABCD5678',
     ssid: 'EnGeniusD0A860',
@@ -44,7 +44,7 @@ export const DEVICES_STATUS: Array<DeviceStatus> = [
     controlServerURL: 'http://controlServerURL/some-url/',
   },
   {
-    os: 'ios',
+    platform: 'ios',
     launchDate: '17.04.2006 14:22:48',
     deviceId: '1234ABCD5678',
     ssid: 'EnGeniusD0A860',
@@ -58,7 +58,7 @@ export const DEVICES_STATUS: Array<DeviceStatus> = [
     controlServerURL: 'http://controlServerURL/some-url/',
   },
   {
-    os: 'android',
+    platform: 'android',
     launchDate: '17.04.2006 14:22:48',
     deviceId: '1234ABCD5678',
     ssid: 'EnGeniusD0A860',
@@ -72,7 +72,7 @@ export const DEVICES_STATUS: Array<DeviceStatus> = [
     controlServerURL: 'http://controlServerURL/some-url/',
   },
   {
-    os: 'windows',
+    platform: 'windows',
     launchDate: '17.04.2006 14:22:48',
     deviceId: '1234ABCD5678',
     ssid: 'EnGeniusD0A860',
