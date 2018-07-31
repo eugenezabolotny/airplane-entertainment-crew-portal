@@ -2,55 +2,47 @@
   <div class="container">
     <div class="devices-status">
       <div class="header col-12 h1">devices status</div>
-      <p-table [value]="statusData" [scrollable]="true" scrollHeight="80vh">
+      <p-table #dt [columns]="cols" [value]="statusData" [scrollable]="true" scrollHeight="60vh"
+               [resizableColumns]="true" columnResizeMode="expand" sortMode="multiple" selectionMode="single">
+
+        <ng-template pTemplate="caption">
+          <select (change)="select($event)">
+            <option value="1">Last 1 hour</option>
+            <option value="2" selected>Last 2 hours</option>
+            <option value="3">Last 3 hours</option>
+            <option value="6">Last 6 hours</option>
+            <option value="12">Last 12 hours</option>
+            <option value="24">Last 24 hours</option>
+          </select>
+          <div style="text-align: right">
+            <input type="text" pInputText size="50" placeholder=" Global Filter"
+                   (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+          </div>
+        </ng-template>
+
         <ng-template pTemplate="colgroup" let-columns>
           <colgroup>
-            <col width="150">
-            <col width="200">
-            <col width="400">
-            <col width="150">
-            <col width="150">
-            <col width="150">
-            <col width="150">
-            <col width="150">
-            <col width="150">
-            <col width="150">
-            <col width="150">
-            <col width="400">
+            <col *ngFor="let col of columns" width={{col.width}}>
           </colgroup>
         </ng-template>
-        <ng-template pTemplate="header">
+
+        <ng-template pTemplate="header" let-columns>
           <tr>
-            <th>platform</th>
-            <th>launchDate</th>
-            <th>deviceId</th>
-            <th>ssid</th>
-            <th>accessPointMAC</th>
-            <th>rssi</th>
-            <th>ip</th>
-            <th>dataReceived</th>
-            <th>dataSent</th>
-            <th>connectionSpeed</th>
-            <th>serverPing</th>
-            <th>controlServerURL</th>
+            <th *ngFor="let col of columns" pResizableColumn  [pSortableColumn]="col.field">
+              {{col.header}}
+              <p-sortIcon [field]="col.field"></p-sortIcon>
+            </th>
           </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-statusData>
-          <tr>
-            <td nowrap>{{statusData.platform}}</td>
-            <td nowrap>{{statusData.launchDate}}</td>
-            <td nowrap>{{statusData.deviceId}}</td>
-            <td nowrap>{{statusData.ssid}}</td>
-            <td nowrap>{{statusData.accessPointMAC}}</td>
-            <td nowrap>{{statusData.rssi}}</td>
-            <td nowrap>{{statusData.ip}}</td>
-            <td nowrap>{{statusData.dataReceived}}</td>
-            <td nowrap>{{statusData.dataSent}}</td>
-            <td nowrap>{{statusData.connectionSpeed}}</td>
-            <td nowrap>{{statusData.serverPing}}</td>
-            <td nowrap>{{statusData.controlServerURL}}</td>
+
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr [pSelectableRow]="rowData">
+            <td *ngFor="let col of columns" class="ui-resizable-column" nowrap>
+              {{rowData[col.field]}}
+            </td>
           </tr>
         </ng-template>
+
       </p-table>
     </div>
   </div>

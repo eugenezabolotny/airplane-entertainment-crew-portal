@@ -6,36 +6,9 @@ $windows-icon-url: url('../../../assets/img/windows-logo-light.png');
 
 .devices-status {
 
-  .card {
-    position: relative;
-    border-radius: 5px;
-    padding: 5px 10px;
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    &.ios {
-      background-image: $ios-icon-url;
-    }
-    &.android {
-      background-image: $android-icon-url;
-    }
-    &.windows {
-      background-image: $windows-icon-url;
-    }
-  }
-
-  .card-img-top {
-    height: 30px;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  .list-group {
-    font-size: 12px;
-  }
-
-  .card-title {
-    font-weight: bold;
+  select {
+    position: absolute;
+    left: 8px;
+    top: 8px;
   }
 }

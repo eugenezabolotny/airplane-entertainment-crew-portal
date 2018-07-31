@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {DEVICES_STATUS} from '../../data/mock-data/devices-status';
 import {environment} from '../../../environments/environment';
 
 
@@ -11,28 +10,45 @@ import {environment} from '../../../environments/environment';
 })
 export class DevicesStatusComponent implements OnInit {
 
-  private devicesStatus = DEVICES_STATUS;
   private statusData: any;
+  private cols: any[];
 
   constructor(private http: HttpClient) {
     this.showData();
   }
 
   ngOnInit() {
+    this.cols = [
+      {field: 'platform',         header: 'platform',         width: '150'},
+      {field: 'launchDate',       header: 'launchDate',       width: '300'},
+      {field: 'deviceId',         header: 'deviceId',         width: '350'},
+      {field: 'ssid',             header: 'ssid',             width: '150'},
+      {field: 'accessPointMAC',   header: 'accessPointMAC',   width: '200'},
+      {field: 'rssi',             header: 'rssi',             width: '150'},
+      {field: 'ip',               header: 'ip',               width: '250'},
+      {field: 'dataReceived',     header: 'dataReceived',     width: '150'},
+      {field: 'dataSent',         header: 'dataSent',         width: '150'},
+      {field: 'connectionSpeed',  header: 'connectionSpeed',  width: '170'},
+      {field: 'serverPing',       header: 'serverPing',       width: '150'},
+      {field: 'controlServerURL', header: 'controlServerURL', width: '400'},
+    ];
   }
 
-  getData() {
-    return this.http.get(environment.serverUrl + 'device');
+  getData(hours) {
+    return this.http.get(environment.serverUrl + 'device/' + hours);
   }
 
-  showData() {
-    console.log(this.getData());
-    this.getData().subscribe(
+  showData(hours = 2) {
+    this.getData(hours).subscribe(
       (response: any) => {
         this.statusData = response;
-        console.log(this.statusData);
       },
       (error: any) => console.warn(error)
     );
+  }
+
+  select(e) {
+    const hours = +e.target.value;
+    this.showData(hours);
   }
 }
