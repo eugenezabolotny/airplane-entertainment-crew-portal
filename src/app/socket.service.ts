@@ -1,11 +1,11 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import * as io from 'socket.io-client';
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class WebsocketService {
+export class SocketService {
   private host = 'http://localhost:5000';
   private socket: any;
 
@@ -25,7 +25,7 @@ export class WebsocketService {
 
   // EMITTER
   sendMessage(msg: string) {
-    this.socket.emit('sendMessage', {message: msg});
+    this.socket.emit('message', msg);
   }
 
   // HANDLER

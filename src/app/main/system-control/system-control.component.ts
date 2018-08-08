@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WebsocketService } from '../../websocket.service';
+import { SocketService } from '../../socket.service';
 
 @Component({
   selector: 'app-system-control',
@@ -7,18 +7,18 @@ import { WebsocketService } from '../../websocket.service';
   styleUrls: ['./system-control.component.scss']
 })
 export class SystemControlComponent implements OnInit {
-  msgInput = 'lorem ipsum';
+  msgInput = 'play';
 
-  constructor(private websocketService: WebsocketService) {}
+  constructor(private socketService: SocketService) {}
 
   ngOnInit() {
-    this.websocketService.onNewMessage().subscribe(msg => {
+    this.socketService.onNewMessage().subscribe(msg => {
       console.log('got a msg: ' + msg);
     });
   }
 
   sendMsg() {
-    this.websocketService.sendMessage(this.msgInput);
+    this.socketService.sendMessage(this.msgInput);
   }
 
 }
