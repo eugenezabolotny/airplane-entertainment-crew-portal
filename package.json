@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4300",
-    "build": "ng build",
+    "build hornet1": "ng build && cp .htaccess dist/crew-front-end/",
+    "build hornet2": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

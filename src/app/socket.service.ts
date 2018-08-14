@@ -31,7 +31,7 @@ export class SocketService {
   // HANDLER
   onNewMessage() {
     return Observable.create(observer => {
-      this.socket.on('mediaDuration', msg => {
+      this.socket.on('crew', msg => {
         observer.next(msg);
       });
     });

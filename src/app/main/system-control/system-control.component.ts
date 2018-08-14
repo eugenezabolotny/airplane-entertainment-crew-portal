@@ -17,7 +17,6 @@ export class SystemControlComponent implements OnInit {
 
   ngOnInit() {
     this.socketService.onNewMessage().subscribe(msg => {
-      console.log('got a msg: ' + msg.duration);
       if (msg) {
         this.playNow = msg.name;
         this.duration = msg.duration;
@@ -27,12 +26,12 @@ export class SystemControlComponent implements OnInit {
   }
 
   sendMsg(msg) {
+    clearInterval(this.interval);
     if (msg !== this.playNow) {
       this.socketService.sendMessage(msg);
     } else {
       this.socketService.sendMessage('stop');
       this.playNow = '';
-      clearInterval(this.interval);
     }
   }
 
@@ -61,7 +60,6 @@ export class SystemControlComponent implements OnInit {
 
     const s = sec >= 10 ? sec : '0' + sec;
     this.timer = `-${h}:${m}:${s}`;
-    console.log(this.timer);
   }
 
 }

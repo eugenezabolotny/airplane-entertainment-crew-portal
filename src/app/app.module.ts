@@ -15,7 +15,6 @@ import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './main/home/home.component';
 import { ModemStatusComponent } from './main/modem-status/modem-status.component';
 import { DevicesStatusComponent } from './main/devices-status/devices-status.component';
-import { StopComponent } from './main/system-control/stop/stop.component';
 import { TableModule } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
 
@@ -41,7 +40,6 @@ const appRoutes: Routes = [
     HomeComponent,
     ModemStatusComponent,
     DevicesStatusComponent,
-    StopComponent,
   ],
   imports: [
     BrowserModule,
