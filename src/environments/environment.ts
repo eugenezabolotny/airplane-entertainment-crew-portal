@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  serverUrl: 'http://192.168.52.142/api/index.php/'
+  serverUrl: 'http://192.168.52.142/api/index.php/',
+  apiUrl: 'http://192.168.52.10:4200/api/v1.0/'
 };
 
 /*

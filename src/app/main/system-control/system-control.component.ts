@@ -16,13 +16,14 @@ export class SystemControlComponent implements OnInit {
   constructor(private socketService: SocketService) {}
 
   ngOnInit() {
-    this.socketService.onNewMessage().subscribe(msg => {
-      if (msg) {
-        this.playNow = msg.name;
-        this.duration = msg.duration;
-        this.onPlay(this.duration);
-      }
-    });
+    // TODO: uncomment for socket
+    // this.socketService.onNewMessage().subscribe(msg => {
+    //   if (msg) {
+    //     this.playNow = msg.name;
+    //     this.duration = msg.duration;
+    //     this.onPlay(this.duration);
+    //   }
+    // });
   }
 
   sendMsg(msg) {
