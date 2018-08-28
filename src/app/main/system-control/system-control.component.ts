@@ -16,7 +16,7 @@ export class SystemControlComponent implements OnInit {
   constructor(private socketService: SocketService) {}
 
   ngOnInit() {
-    // TODO: uncomment for socket
+    // TODO: uncomment to enable socket
     // this.socketService.onNewMessage().subscribe(msg => {
     //   if (msg) {
     //     this.playNow = msg.name;

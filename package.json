@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4300",
-    "build apache": "ng build && cp .htaccess dist/crew-front-end/",
+    "build apache": "ng build && cp .htaccess dist/",
     "build nginx": "ng build",
     "test": "ng test",
     "lint": "ng lint",

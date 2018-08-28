@@ -9,43 +9,53 @@ import { environment } from '../../../environments/environment';
 })
 export class LoadContentComponent implements OnInit {
 
-  private statusContent = false;
   public content = 'content load status';
+  public btnStatus = false;
   private contentStates = {
-    'ready': 'content is ready to uploading',
     'notready': 'content is not ready',
+    'ready': 'content is ready to uploading',
     'inprocess': 'loading in process',
     'done': 'loading complete'
   };
-  public btnStatus = false;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    if (this.showStatus()) {
-      this.content = this.contentStates.ready;
-      this.btnStatus = true;
-    } else {
-      this.content = this.contentStates.notready;
-    }
+    this.showIsReadyStatus();
   }
 
   getStatus() {
     return this.http.get(environment.apiUrl + 'contentLoader/status');
   }
 
-  showStatus() {
+  getContent() {
+    return this.http.get(environment.apiUrl + 'contentLoader/load');
+  }
+
+  showIsReadyStatus() {
     this.getStatus().subscribe(
       (response: any) => {
-        this.statusContent = response;
-        console.log(this.statusContent);
+        if (response['status']) {
+          this.content = this.contentStates.ready;
+          this.btnStatus = true;
+        } else {
+          this.content = this.contentStates.notready;
+        }
       },
       (error: any) => console.warn(error)
     );
   }
 
   loadContent() {
-    this.http.post(environment.apiUrl + 'contentLoader/load', true);
+    this.content = this.contentStates.inprocess;
+    this.getContent().subscribe(
+      (response: any) => {
+        if (response['status']) {
+          this.content = this.contentStates.done;
+        }
+      },
+      (error: any) => console.warn(error)
+    );
   }
 
 }

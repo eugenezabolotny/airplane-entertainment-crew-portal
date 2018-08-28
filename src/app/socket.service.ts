@@ -10,7 +10,7 @@ export class SocketService {
   // private host = 'http://192.168.52.10:5000';
   private socket: any;
 
-  // TODO: uncomment all above for socket
+  // TODO: uncomment all below for socket
   constructor() {
     // this.socket = io(this.host);
     // this.socket.on('connect', () => this.onConnect());
